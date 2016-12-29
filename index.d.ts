@@ -27,7 +27,7 @@ declare module "not.js" {
         addClass(className: string): void;
         dropLastToken(): void;
     }
-    export const string: StringBuilder;
+    export const string: typeof StringBuilder;
     export interface Options<T> {
         explicit: boolean;
         builder: Builder<T>;
