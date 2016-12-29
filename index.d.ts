@@ -42,8 +42,8 @@ declare module "not.js" {
         restart(): void;
     }
     export function create<T>(builder?: Builder<T>): Context;
-    export function prepareFunc<T>(func: Function, builder?: Builder<T>): (scope: any) => string;
-    export function renderFunc<T>(func: Function, scope?: any, builder?: Builder<T>): string;
+    export function prepareFunc<T>(func: Function, builder?: Builder<T>, basepath?: string): (scope: any) => string;
+    export function renderFunc<T>(func: Function, scope?: any, builder?: Builder<T>, basepath?: string): string;
     export function renderPath(path: string, callback: ExpressCallback): void;
     export function renderPath<T>(path: string, options: Options<T>, callback: ExpressCallback): void;
 }
